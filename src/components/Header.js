@@ -1,7 +1,8 @@
 import { Box, Flex, Heading, Icon, Link } from '@chakra-ui/react';
 import { useState } from 'react';
-import { HiMenuAlt3, HiOutlineLogin, HiOutlineShoppingCart, HiUser } from 'react-icons/hi';
+import { HiMenuAlt3, HiOutlineLogin, HiOutlineShoppingCart } from 'react-icons/hi';
 import HeaderMenuItem from './HeaderMenuItem';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
 	const [show, setShow] = useState(false);
@@ -19,7 +20,7 @@ const Header = () => {
 			pos='fixed'
 			top='0'
 			left='0'>
-			<Link href='/'>
+			<Link as ={RouterLink} to='/'>
 				<Heading
 					as='h1'
 					fontWeight='bold'
@@ -40,10 +41,10 @@ const Header = () => {
 				display={{ base: show ? 'block' : 'none', md: 'flex' }}
 				width={{ base: 'full', md: 'auto' }}
 				mt={{ base: '2', md: '0' }}>
-				<HeaderMenuItem href='/cart' icon={HiOutlineShoppingCart}>
+				<HeaderMenuItem url='/cart' icon={HiOutlineShoppingCart}>
 					Cart
 				</HeaderMenuItem>
-				<HeaderMenuItem href='/login' icon={HiOutlineLogin}>
+				<HeaderMenuItem url='/login' icon={HiOutlineLogin}>
 					Login
 				</HeaderMenuItem>
 			</Box>
