@@ -5,8 +5,8 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
   return (
-    <Link as={RouterLink} to={`/product/${product._id}`} _hover={{ shadow: 'lg' }}>
-        <Box borderRadius="lg" bgColor="white" _hover={{ shadow: 'lg' }}>
+    <Link as={RouterLink} to={`/product/${product._id}`} _hover={{ shadow: 'xl' }}>
+        <Box borderRadius="lg" bgColor="white" _hover={{ shadow: 'xl' }}>
             <Image
                 src={product.image}
                 alt={product.name}

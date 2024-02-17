@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProductScreen from './screens/ProductScreen';
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
             px='6'
             bgColor='gray.200'
           >
-            <HomeScreen />
             <Routes>
               <Route path='/' element={<HomeScreen />} />
+              <Route path='/product/:id' element={<ProductScreen />} />
             </Routes>
           </Flex>
         <Footer />
